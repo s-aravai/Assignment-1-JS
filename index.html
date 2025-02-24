@@ -1,0 +1,158 @@
+<!--
+* @name: Assignement1
+* @Course Code: SODV1201
+* @class: Software Development Diploma program.
+* @author: Salman Aravai.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="" href="My Images/favicon1.png" />
+  </head>
+
+  <body>
+    <!-- Landing Page -->
+    <header class="header">
+      <a href="#home" class="logo">Salman <span>Aravai</span></a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#mark-to-grade">Mark to Grade</a>
+        <a href="#staff-page">Staff</a>
+        <a href="#weather">Weather</a>
+      </nav>
+
+      <a href="mailto:salmanaravai786@gmail.com" target="_blank"
+        ><button class="gradient-btn">Contact Me</button></a
+      >
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1 id="greeting" style="display:none;">Hi, It's <span>Salman</span></h1>
+        <p>
+          I am a Software Development student at Bow Valley College, passionate
+          about building innovative solutions. With a keen eye for detail,
+          strong problem-solving skills, and a love for coding, I'm excited to
+          bring creative ideas to life.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://github.com/s-aravai" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/salman-aravai-23349a319/"
+            target="_blank"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+          <a href="https://www.instagram.com/salmon_aravai/" target="_blank"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+          <a href="mailto:salmanaravai786@gmail.com" target="_blank"
+            ><i class="bx bx-envelope"></i
+          ></a>
+        </div>
+
+        <div class="btn-group">
+          <a href="Salman Web Resume/" target="_blank" class="btn">My Resume</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="My Images/salmanpurp.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Mark to Grade Section -->
+
+    <section class="mark-to-grade" id="mark-to-grade">
+    
+      <div class="mark-to-grade">
+        <h2>Mark to Grade Converter</h2>
+        <div class="converter">
+          <label for="mark-input-box">Enter Mark:</label>
+          <input
+            type="text"
+            id="mark-input-box"
+            placeholder="Enter a mark (0-100)"
+          />
+          <button onclick="MarkToGrade()">Convert</button>
+        </div>
+        <div id="validationmessage" class="message"></div>
+        <div id="result" class="result"></div>
+      </div>
+    </section>
+
+    <!-- Staff Section -->
+
+    <section class="staff-page" id="staff-page">
+      <div class="staff-page"></div>
+      <h2>Staff Information</h2>
+      <!-- Sorting Controls -->
+      <div class="sort-controls">
+        <!-- A simple dropdown to choose sort option -->
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect" onchange="sortStaff()">
+          <option value="name">Name</option>
+          <option value="salary">Salary</option>
+        </select>
+      </div>
+
+      <div id="staffList" class="staff-list"></div>
+    </div>
+    </section>
+
+<!-- Weather -->
+    <section class="weather" id="weather">
+    <div class="weather">
+      <h2>Weather Temperature Converter</h2>
+      <div class="converter-box">
+        <label for="tempF">Enter Temperature in Fahrenheit:</label>
+        <input type="text" id="tempF" placeholder="e.g. 98.6" />
+  
+        <!-- Button triggers our anonymous function -->
+        <button id="convertBtn">Convert</button>
+      </div>
+  
+      <!-- Result displays here -->
+      <div class="result">
+        <p id="celsiusResult"></p>
+        <p id="kelvinResult"></p>
+      </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul class="list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#mark-to-grade">Mark to Grade</a></li>
+        <li><a href="#staff-page">Staff</a></li>
+        <li><a href="#weather">Weather</a></li>
+      </ul>
+
+      <p class="copyright">&copy; 2025 Salman Aravai | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="jquery.js"></script>
+  </body>
+</html>

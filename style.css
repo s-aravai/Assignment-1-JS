@@ -1,0 +1,438 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins';
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #101010;
+    --text-color: #fff;
+    --main-color: #fb0aff;
+    
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex; 
+    flex-direction: column; 
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+span {
+    background: linear-gradient(
+        270deg,
+        #3700ff 10%,
+        #c903fb 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.6s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.gradient-btn {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(
+        270deg,
+        #3700ff 10%,
+        #c903fb 100%
+    );
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    color: var(--text-color);
+    border: none;
+    text-wrap: nowrap;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.08);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.home-content h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-content h3 {
+    margin: 1rem 0;
+    font-size: 4rem;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.home-img img {
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color);
+    box-shadow: 0 0 50px var(--main-color);
+    
+                
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: black;
+    box-shadow: 0 0 25px transparent;
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+
+.footer {
+    position: fixed; 
+    bottom: 0;      
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    z-index: 1000;
+}
+
+.footer ul {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent; 
+    transition: 0.6s ease-in-out;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid var(--main-color);
+    
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px ;
+    font-size: 16px;
+}
+
+/* Styling for Mark to grade */
+
+.mark-to-grade {
+    margin-top: 85px;
+    padding: 3rem 15%;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    font-size: large;
+  }
+
+  .mark-to-grade .converter {
+    margin: 2rem auto;
+  }
+
+  .mark-to-grade input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    width: 200px;
+    margin-right: 1rem;
+  }
+
+  .mark-to-grade button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.8rem;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .mark-to-grade button:hover {
+    background-color: black;
+    color: var(--main-color);
+  }
+
+  .message {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: #ff5555;
+  }
+
+  .result {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--main-color);
+  }
+
+
+/* Styling for Staff */
+
+
+.staff-page {
+    margin-top: 85px;
+    padding: 3rem 15%;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    font-size: large;
+  }
+  
+  .staff-page h2 {
+    margin-bottom: 2rem;
+  }
+  
+ 
+  .sort-controls {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  
+  .staff-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .staff-item {
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    text-align: left;
+    background-color: var(--bg-color);
+  }
+  
+
+  
+/* Weather Page Section */
+.weather {
+    margin-top: 150px; 
+    padding: 3rem 15%;
+    text-align: center;
+    color: #fff;
+    background-color: #101010;
+    min-height: 70vh; 
+  }
+  
+  .weather h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+  
+  .converter-box {
+    margin: 2rem auto;
+    font-size: 1.8rem;
+  }
+  
+  .converter-box input {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    width: 200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .converter-box button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: #fb0aff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .converter-box button:hover {
+    background-color: #000;
+    color: #fb0aff;
+  }
+  
+  .result {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #fb0aff;
+  }
+
+
+
+
+
+
+@media (max-width: 1285px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3rem;
+        background: rgba(0, 0, 0, 0.8);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none; 
+    }
+
+    .navbar.active {
+        display: block; 
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+
+    .gradient-btn {
+        display: none;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 56vw;
+    }
+
+    
+}
